@@ -35,9 +35,6 @@ This manual process is inefficient and often results in posters that fail to cap
 
 The Runic Scribe framework operates through a sequential, multi-stage process:
 
-![Pipeline Diagram](https://i.imgur.com/yOq5b9W.png)
-*(A conceptual diagram of the pipeline)*
-
 1.  **Input & Asset Extraction:** A Python script ingests a PDF and uses the `PyMuPDF` library to separate the document into its core components: raw text and all embedded images, which are saved individually.
 
 2.  **Phase 1: The Initial Inscription:** The extracted text and images are passed to our core VLM (e.g., a quantized Qwen-VL). The VLM is prompted to analyze the content and generate a structured **JSON object**. This JSON represents the initial poster draft, containing summarized text, image placements, and crucially, the contextual links between them.
